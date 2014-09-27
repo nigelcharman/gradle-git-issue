@@ -1,0 +1,18 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'org.ajoberstar:gradle-git:0.10.0' 
+    }
+}
+
+apply plugin: 'org.ajoberstar.github-pages'
+
+githubPages {
+    repoUri = 'git@github.com:nigelcharman/temp.git'      
+    pages {
+        from 'docs'
+    }
+}
